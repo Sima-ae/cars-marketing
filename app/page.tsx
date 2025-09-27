@@ -7,167 +7,444 @@ export default function CarsMarketingPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm">
+      <header className="bg-white shadow-lg border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">CM</span>
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-700 rounded-xl flex items-center justify-center shadow-md">
+                <span className="text-white font-bold text-lg">CM</span>
               </div>
-              <span className="text-xl font-semibold text-gray-900">Cars Marketing</span>
+              <span className="text-2xl font-bold text-gray-900">Cars Marketing</span>
             </div>
-            <div className="flex items-center space-x-6">
+            <div className="hidden lg:flex items-center space-x-8">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <div className="w-4 h-4 bg-teal-600 rounded-full"></div>
-                <span>We are mainly active in</span>
+                <div className="w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
+                <span className="font-medium">Active in</span>
               </div>
-              <Badge variant="outline" className="text-sm">
+              <Badge variant="outline" className="text-sm font-semibold border-teal-200 text-teal-700 bg-teal-50">
                 ASIA, EUROPE, UAE & USA
               </Badge>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <div className="w-4 h-4 bg-teal-600 rounded-full"></div>
-                <span>Languages</span>
+                <div className="w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
+                <span className="font-medium">Languages</span>
               </div>
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white">Get A Quote</Button>
+              <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+                Get A Quote
+              </Button>
+            </div>
+            <div className="lg:hidden">
+              <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-4 py-2 rounded-lg shadow-md">
+                Get Quote
+              </Button>
             </div>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-100 to-gray-200 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl font-bold text-gray-900 mb-6">
-                Cars <span className="text-teal-600">Marketing</span>
+      <section className="relative bg-gradient-to-br from-gray-50 via-white to-teal-50 py-16 lg:py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-500/5 to-transparent"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="space-y-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                Cars <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-800">Marketing</span>
               </h1>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl">
                 Accelerate your automotive business with proven digital marketing strategies. From dealership promotion
-                to brand awareness, we drive results that matter. Our expert team specializes in automotive marketing
-                across all platforms, helping you reach more customers and increase sales.
+                to brand awareness, we drive results that matter.
               </p>
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 text-lg">
-                Start Your Campaign
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-6 py-2 text-base rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+                  Start Your Campaign
+                </Button>
+                <Button variant="outline" className="border-2 border-teal-600 text-teal-700 hover:bg-teal-50 font-semibold px-6 py-2 text-base rounded-lg transition-all duration-200">
+                  Learn More
+                </Button>
+              </div>
             </div>
-            <div className="relative">
-              <img
-                src="/professional-woman-giving-thumbs-up-in-modern-offi.png"
-                alt="Professional automotive marketing consultant"
-                className="rounded-lg shadow-lg"
-              />
+            <div className="relative lg:order-last">
+              <div className="relative">
+                <img
+                  src="/professional-woman-giving-thumbs-up-in-modern-offi.png"
+                  alt="Professional automotive marketing consultant"
+                  className="rounded-2xl shadow-2xl w-full max-w-lg mx-auto transform hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full opacity-20 animate-pulse"></div>
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-teal-300 to-teal-500 rounded-full opacity-10 animate-pulse delay-1000"></div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Service Tags */}
-      <section className="py-8 bg-white">
+      {/* Platform Icons */}
+      <section className="py-12 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-3">
+          <p className="text-center text-gray-700 text-lg font-medium mb-4">
+            We provide services for our clients on the following platforms
+          </p>
+          <div className="grid grid-cols-6 sm:grid-cols-9 md:grid-cols-12 lg:grid-cols-18 gap-3 sm:gap-4 lg:gap-6 justify-items-center">
             {[
-              "Advertising",
-              "Branding",
-              "Copywriting",
-              "Email",
-              "Lead Generation",
-              "Pay-per-click",
-              "Planning",
-              "Remarketing",
-              "Strategy",
-              "Leads",
-              "SEO",
-              "PPC",
-              "Content",
-              "CRO",
-              "Social",
-              "Analytics",
-              "ROI",
-              "Web",
-            ].map((tag) => (
-              <Badge key={tag} variant="secondary" className="bg-gray-800 text-white hover:bg-gray-700">
-                {tag}
-              </Badge>
+              { name: "Amazon", logo: "/logos/amazon-icon.png" },
+              { name: "Discord", logo: "/logos/discord-icon.png" },
+              { name: "Facebook", logo: "/logos/facebook-icon.png" },
+              { name: "Facebook Messenger", logo: "/logos/facebook-messenger-icon.png" },
+              { name: "Google", logo: "/logos/google-icon.png" },
+              { name: "Instagram", logo: "/logos/instagram-icon.png" },
+              { name: "LinkedIn", logo: "/logos/linkedin-icon.png" },
+              { name: "Meta", logo: "/logos/meta-icon.png" },
+              { name: "Pinterest", logo: "/logos/pinterest-icon.png" },
+              { name: "Shopify", logo: "/logos/shopify-icon.png" },
+              { name: "Snapchat", logo: "/logos/snapchat-icon.png" },
+              { name: "Spotify", logo: "/logos/spotify-icon.png" },
+              { name: "Telegram", logo: "/logos/telegram-icon.png" },
+              { name: "TikTok", logo: "/logos/tiktok-icon.png" },
+              { name: "Twitch", logo: "/logos/twitch-icon.png" },
+              { name: "WhatsApp", logo: "/logos/whatsapp-icon.png" },
+              { name: "X", logo: "/logos/x-icon.png" },
+              { name: "YouTube", logo: "/logos/youtube-icon.png" },
+            ].map((platform) => (
+              <div key={platform.name} className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 group">
+                <img src={platform.logo} alt={platform.name} className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain group-hover:scale-110 transition-transform duration-300" />
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 4 Steps Process */}
-      <section className="py-16 bg-gray-50">
+
+       {/* Digital & Social Media Marketing Section */}
+       <section className="pt-12 pb-20 bg-gradient-to-br from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-teal-600 font-medium mb-2">Our working process</p>
-            <h2 className="text-4xl font-bold text-gray-900">In 4 Steps</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                  Digital & Social Media <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-800">Marketing</span>
+                </h2>
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">With a focus on measurable results and a commitment to excellence, we ensure your automotive marketing efforts translate into increased traffic, higher conversions, and enhanced brand visibility.</p>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed font-medium">We only work with official channels, NO Bots!</p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600">
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>A/B Testing</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Advertising Campaigns</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Advice from certified professionals</span>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Analytics</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Branding</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Business Growth</span>
+                  </div>
+                  
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Content Creation</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Conversion Rate Optimization</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Copywriting</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Driven by collected data</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Email and Mailing Lists</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Focused on buyer CPA/CPC</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Increased ROAS and ROI</span>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Lead Generation</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Long-term prospects</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Market Penetration</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Pay-per-click</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Personal approach</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Planning and Strategy</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>PPC Management</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Sales Optimization</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>SEM, SEO and SXO</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Remarketing</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Social Media Management</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>Website Development</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                    </div>
+                    <span>and we offer more services</span>
+                  </div>
+                </div>
+              </div>
+
+              <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                Schedule an appointment →
+              </Button>
+            </div>
+
+            <div className="relative lg:order-first">
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-2xl border border-gray-100">
+                <div className="space-y-6">
+                  <div className="bg-gradient-to-r from-teal-600 to-teal-700 text-white p-6 rounded-2xl text-center shadow-lg">
+                    <div className="text-4xl font-bold mb-2">15+</div>
+                    <div className="text-lg font-medium">Years of experience</div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div className="space-y-2">
+                      {[
+                        { platform: "Amazon" },
+                        { platform: "Discord" },
+                        { platform: "Facebook" },
+                        { platform: "Google" },
+                        { platform: "Instagram" },
+                        { platform: "LinkedIn" },
+                        { platform: "Messenger" },
+                        { platform: "Meta" },
+                        { platform: "Pinterest" },
+                      ].map((item) => (
+                        <div
+                          key={item.platform}
+                          className="flex items-center justify-between p-3 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border border-gray-100"
+                        >
+                          <div className="flex items-center space-x-3">
+                            <img src="/checkmark-icon.png" alt="checkmark" className="w-5 h-5" />
+                            <span className="text-sm font-semibold text-gray-700">{item.platform}</span>
+                          </div>
+                          <CheckCircle className="w-4 h-4 text-teal-600" />
+                        </div>
+                      ))}
+                    </div>
+                    <div className="space-y-2">
+                      {[
+                        { platform: "Shopify" },
+                        { platform: "Snapchat" },
+                        { platform: "Spotify" },
+                        { platform: "Telegram" },
+                        { platform: "TikTok" },
+                        { platform: "Twitch" },
+                        { platform: "WhatsApp" },
+                        { platform: "X" },
+                        { platform: "YouTube" },
+                      ].map((item) => (
+                        <div
+                          key={item.platform}
+                          className="flex items-center justify-between p-3 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-200 border border-gray-100"
+                        >
+                          <div className="flex items-center space-x-3">
+                            <img src="/checkmark-icon.png" alt="checkmark" className="w-5 h-5" />
+                            <span className="text-sm font-semibold text-gray-700">{item.platform}</span>
+                          </div>
+                          <CheckCircle className="w-4 h-4 text-teal-600" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4 Steps Process */}
+      <section className="pt-20 pb-24 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+              Our working process <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-800">In 4 Steps</span>
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center">
-              <CardContent className="p-6">
-                <div className="relative mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            <Card className="text-center group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
+              <CardContent className="p-8">
+                <div className="relative mb-6">
                   <img
                     src="/business-meeting-with-automotive-professionals-dis.png"
                     alt="Meeting"
-                    className="rounded-lg w-full h-40 object-cover"
+                    className="rounded-2xl w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <Badge className="absolute top-2 left-2 bg-teal-600">Step 01</Badge>
+                  <Badge className="absolute top-4 left-4 bg-gradient-to-r from-teal-600 to-teal-700 text-white font-bold px-4 py-2 rounded-xl shadow-lg">
+                    Step 01
+                  </Badge>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Meeting</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="text-xl font-bold mb-4 text-teal-600">Meeting</h3>
+                <p className="text-gray-600 leading-relaxed">
                   We start by having our meetings to understand your automotive business goals. Schedule with a dealer
                   marketing expert appointment.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
-              <CardContent className="p-6">
-                <div className="relative mb-4">
+            <Card className="text-center group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
+              <CardContent className="p-8">
+                <div className="relative mb-6">
                   <img
                     src="/business-professionals-analyzing-analytics-dashboard.png"
                     alt="Plan of approach"
-                    className="rounded-lg w-full h-40 object-cover"
+                    className="rounded-2xl w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <Badge className="absolute top-2 left-2 bg-teal-600">Step 02</Badge>
+                  <Badge className="absolute top-4 left-4 bg-gradient-to-r from-teal-600 to-teal-700 text-white font-bold px-4 py-2 rounded-xl shadow-lg">
+                    Step 02
+                  </Badge>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Plan of approach</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="text-xl font-bold mb-4 text-teal-600">Plan of approach</h3>
+                <p className="text-gray-600 leading-relaxed">
                   Crafting the budget, setting realistic goals, choosing audience, objectives, strategy and full
                   summary.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
-              <CardContent className="p-6">
-                <div className="relative mb-4">
+            <Card className="text-center group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
+              <CardContent className="p-8">
+                <div className="relative mb-6">
                   <img
                     src="/automotive-marketing-campaign-execution-with-digit.png"
                     alt="Start"
-                    className="rounded-lg w-full h-40 object-cover"
+                    className="rounded-2xl w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <Badge className="absolute top-2 left-2 bg-teal-600">Step 03</Badge>
+                  <Badge className="absolute top-4 left-4 bg-gradient-to-r from-teal-600 to-teal-700 text-white font-bold px-4 py-2 rounded-xl shadow-lg">
+                    Step 03
+                  </Badge>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Start</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="text-xl font-bold mb-4 text-teal-600">Start</h3>
+                <p className="text-gray-600 leading-relaxed">
                   Is everything clear? Are you satisfied with our approach and our plan of approach? Let's start!
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
-              <CardContent className="p-6">
-                <div className="relative mb-4">
+            <Card className="text-center group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
+              <CardContent className="p-8">
+                <div className="relative mb-6">
                   <img
                     src="/business-professionals-planning-meeting-with-charts.png"
                     alt="Results"
-                    className="rounded-lg w-full h-40 object-cover"
+                    className="rounded-2xl w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <Badge className="absolute top-2 left-2 bg-teal-600">Step 04</Badge>
+                  <Badge className="absolute top-4 left-4 bg-gradient-to-r from-teal-600 to-teal-700 text-white font-bold px-4 py-2 rounded-xl shadow-lg">
+                    Step 04
+                  </Badge>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Results</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="text-xl font-bold mb-4 text-teal-600">Results</h3>
+                <p className="text-gray-600 leading-relaxed">
                   After a successful period we create a report and optimize for a follow-up campaign.
                 </p>
               </CardContent>
@@ -176,173 +453,11 @@ export default function CarsMarketingPage() {
         </div>
       </section>
 
-      {/* Social Media Marketing Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-teal-600 font-medium mb-2">Social Media</p>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Marketing</h2>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                With a focus on measurable results and a commitment to excellence, we ensure your automotive marketing
-                efforts translate into increased traffic, higher conversions, and enhanced brand visibility.
-              </p>
+      
 
-              <div className="space-y-4 mb-8">
-                {[
-                  "Advice from certified automotive professionals",
-                  "Customized advertising campaigns",
-                  "Driven by collected data",
-                  "Focused on buyer CPA/CPC",
-                  "Increased ROI/ROAS",
-                  "Long-term prospects",
-                  "Personal approach",
-                ].map((item) => (
-                  <div key={item} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600" />
-                    <span className="text-gray-700">{item}</span>
-                  </div>
-                ))}
-              </div>
+     
 
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white">Schedule an appointment →</Button>
-            </div>
-
-            <div className="relative">
-              <div className="bg-gray-100 rounded-lg p-6">
-                <div className="space-y-4">
-                  <div className="mt-6 bg-teal-600 text-white p-4 rounded-lg text-center">
-                    <div className="text-2xl font-bold">12+</div>
-                    <div className="text-sm">Years of experience</div>
-                  </div>
-                  {[
-                    { platform: "Facebook" },
-                    { platform: "Instagram" },
-                    { platform: "Messenger" },
-                    { platform: "Meta" },
-                    { platform: "LinkedIn" },
-                    { platform: "Telegram" },
-                    { platform: "TikTok" },
-                    { platform: "WhatsApp" },
-                    { platform: "X" },
-                  ].map((item) => (
-                    <div
-                      key={item.platform}
-                      className="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm"
-                    >
-                      <div className="flex items-center space-x-3">
-                        <img src="/checkmark-icon.png" alt="checkmark" className="w-5 h-5" />
-                        <span className="font-medium">{item.platform}</span>
-                      </div>
-                      <CheckCircle className="w-5 h-5 text-teal-600" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Platform Icons */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-gray-600 mb-8">
-            We provide services for our clients on the following platforms
-          </p>
-          <div className="flex justify-center items-center space-x-8 flex-wrap gap-4">
-            {[
-              { name: "Meta" },
-              { name: "Facebook" },
-              { name: "Messenger" },
-              { name: "Instagram" },
-              { name: "WhatsApp" },
-              { name: "WeChat" },
-              { name: "TikTok" },
-              { name: "Telegram" },
-              { name: "Snapchat" },
-              { name: "X" },
-            ].map((platform) => (
-              <div key={platform.name} className="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center">
-                <img src="/checkmark-icon.png" alt="checkmark" className="w-6 h-6" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Digital Marketing Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-teal-600 font-medium mb-2">Digital Online</p>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Marketing</h2>
-              <p className="text-gray-600 mb-8 leading-relaxed">We only work with official channels, NO Bots!</p>
-
-              <div className="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-8">
-                <div className="space-y-2">
-                  <div>A/B Testing</div>
-                  <div>Affiliate Promotion</div>
-                  <div>Brand Promotion</div>
-                  <div>Content Marketing</div>
-                  <div>Digital Marketing</div>
-                  <div>Email Marketing</div>
-                  <div>Lead Generation</div>
-                  <div>Market Penetration</div>
-                  <div>PPC Management</div>
-                </div>
-                <div className="space-y-2">
-                  <div>Sales Optimization</div>
-                  <div>Social Media Management</div>
-                  <div>Website Development</div>
-                  <div>and we offer more services</div>
-                </div>
-              </div>
-
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white">Schedule an appointment →</Button>
-            </div>
-
-            <div className="relative">
-              <div className="bg-gray-100 rounded-lg p-6">
-                <div className="space-y-4">
-                  <div className="mt-6 bg-teal-600 text-white p-4 rounded-lg text-center">
-                    <div className="text-2xl font-bold">15+</div>
-                    <div className="text-sm">Years of experience</div>
-                  </div>
-                  {[
-                    { platform: "Amazon Music" },
-                    { platform: "Apple Music" },
-                    { platform: "Discord" },
-                    { platform: "Facebook / Instagram" },
-                    { platform: "Google" },
-                    { platform: "Meta" },
-                    { platform: "NetEase Cloud Music" },
-                    { platform: "SoundCloud" },
-                    { platform: "Spotify" },
-                    { platform: "Tencent Music" },
-                    { platform: "TikTok" },
-                    { platform: "X" },
-                    { platform: "Twitch" },
-                    { platform: "YouTube" },
-                  ].map((item) => (
-                    <div
-                      key={item.platform}
-                      className="flex items-center justify-between p-2 bg-white rounded shadow-sm"
-                    >
-                      <div className="flex items-center space-x-3">
-                        <img src="/checkmark-icon.png" alt="checkmark" className="w-5 h-5" />
-                        <span className="text-sm font-medium">{item.platform}</span>
-                      </div>
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Footer */}
       <footer className="bg-gray-100 py-16">
@@ -376,23 +491,11 @@ export default function CarsMarketingPage() {
                 </p>
               </div>
 
-              <div className="flex space-x-3">
-                <div className="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.367-12 11.987c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                  </svg>
-                </div>
-                <div className="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.347-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-12.013C24.007 5.367 18.641.001 12.017.001z" />
-                  </svg>
-                </div>
-              </div>
             </div>
 
             <div>
               <h3 className="text-xl font-semibold text-teal-600 mb-6">Our Services</h3>
-              <div className="space-y-3 text-sm text-gray-700">
+              <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-gray-700">
                 {[
                   "Automotive Marketing",
                   "Brand Awareness",
@@ -404,7 +507,6 @@ export default function CarsMarketingPage() {
                   "E-commerce",
                   "E-mail Marketing",
                   "Graphic Design",
-                  "Influencer Marketing",
                   "Lead Generation",
                   "Pay-Per-Click",
                   "Product Promotion",
@@ -414,8 +516,10 @@ export default function CarsMarketingPage() {
                   "Webdesign & Webhosting",
                   "Website Traffic Boosting",
                 ].map((service) => (
-                  <div key={service} className="flex items-center space-x-2">
-                    <span className="text-black font-bold">✓</span>
+                  <div key={service} className="flex items-center space-x-3">
+                    <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
+                      <CheckCircle className="w-3 h-3 text-teal-600" />
+                    </div>
                     <span>{service}</span>
                   </div>
                 ))}
@@ -423,17 +527,39 @@ export default function CarsMarketingPage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-teal-600 mb-6">News</h3>
-
+              <h3 className="text-xl font-semibold text-teal-600 mb-6">Contact</h3>
+              
               <div className="mb-8">
-                <h4 className="text-lg font-medium text-teal-600 mb-4">Like to receive our newsletter?</h4>
-                <div className="flex">
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    className="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                  />
-                  <Button className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-l-none">Sign up</Button>
+                <div className="space-y-3 text-sm text-gray-700">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Office</h4>
+                    <p>Zuid-Holland<br />The Netherlands</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
+                    <p>+31687999505</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
+                    <p>info@cars-marketing.com</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">Business hours</h4>
+                    <p>Monday - Saturday: <br /><b>08:00 till 20:00 hours CET.</b><br /><i>Sunday: Closed</i></p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex space-x-3">
+                <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.367-12 11.987c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </div>
+                <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -441,8 +567,9 @@ export default function CarsMarketingPage() {
 
           <div className="border-t border-gray-300 mt-12 pt-8">
             <div className="flex flex-col items-center text-center text-sm text-gray-600 space-y-2">
-              <span>Working Hours: Every day from 08:00 till 20:00 hours CET.</span>
+              
               <span className="font-bold text-gray-900">Cars Marketing © 2025</span>
+               <span>Powered by <a href="https://000-it.com" target="_blank" className="text-teal-600">TripleZero iT</a></span>
             </div>
           </div>
         </div>

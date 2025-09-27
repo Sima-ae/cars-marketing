@@ -1,30 +1,51 @@
-# Cars marketing website
+# Cars Marketing - Professional Automotive Digital Marketing Services
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
-
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/simas-projects-7d212e9c/v0-cars-marketing-website)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/xJqdjzZd2Lc)
+A modern, responsive website for professional automotive digital marketing services. Built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+Cars Marketing provides comprehensive digital marketing solutions for automotive businesses, dealerships, and brands. Our services include social media marketing, SEO optimization, PPC management, content creation, and more.
 
-## Deployment
+## Features
 
-Your project is live at:
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Modern UI**: Clean, professional design with smooth animations
+- **SEO Optimized**: Proper metadata and structured content
+- **Performance**: Fast loading with Next.js optimization
+- **Accessibility**: WCAG compliant design
 
-**[https://vercel.com/simas-projects-7d212e9c/v0-cars-marketing-website](https://vercel.com/simas-projects-7d212e9c/v0-cars-marketing-website)**
+## Services
 
-## Build your app
+- Automotive Marketing
+- Brand Awareness
+- Business Growth
+- Digital Marketing
+- SEO Optimization
+- Social Media Marketing
+- PPC Management
+- Content Creation
+- Lead Generation
+- And more...
 
-Continue building your app on:
+## Technology Stack
 
-**[https://v0.app/chat/projects/xJqdjzZd2Lc](https://v0.app/chat/projects/xJqdjzZd2Lc)**
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI
+- **Icons**: Lucide React
+- **Fonts**: Geist Sans & Mono
 
-## How It Works
+## Getting Started
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run the development server: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Contact
+
+- **Email**: info@cars-marketing.com
+- **Phone**: +31687999505
+- **Location**: Zuid-Holland, The Netherlands
+- **Hours**: Monday - Saturday: 08:00 till 20:00 hours CET

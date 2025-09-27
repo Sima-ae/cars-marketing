@@ -121,3 +121,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Hide V0 branding and watermarks */
+[data-v0-watermark],
+[data-v0-badge],
+.v0-watermark,
+.v0-badge,
+[class*="v0-"],
+[id*="v0-"],
+[href*="v0.app"],
+[href*="vercel.com/v0"],
+iframe[src*="v0"],
+iframe[src*="vercel"],
+div[style*="position: fixed"][style*="bottom"],
+div[style*="position: fixed"][style*="right"],
+a[href*="v0.app"],
+a[href*="vercel.com/v0"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+}
