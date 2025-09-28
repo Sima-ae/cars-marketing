@@ -154,7 +154,7 @@ export default function SimpleContactForm({ isOpen, onClose }: SimpleContactForm
                   disabled={isSubmitting}
                   className="text-sm px-4 py-2"
                 >
-                  Cancel
+                  {t.cancel}
                 </Button>
                 <Button
                   type="submit"
@@ -169,7 +169,7 @@ export default function SimpleContactForm({ isOpen, onClose }: SimpleContactForm
                   ) : (
                     <>
                       <Send className="h-3 w-3 mr-2" />
-                      Send Message
+                      {t.sendMessage}
                     </>
                   )}
                 </Button>
