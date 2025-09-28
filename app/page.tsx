@@ -173,148 +173,21 @@ export default function CarsMarketingPage() {
                       <span>{service}</span>
                     </div>
                   ))}
-                  
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Analytics</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Branding</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Business Growth</span>
-                  </div>
-                  
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Content Creation</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Conversion Rate Optimization</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Copywriting</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Driven by collected data</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Email and Mailing Lists</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Focused on buyer CPA/CPC</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Increased ROAS and ROI</span>
-                  </div>
                 </div>
                 <div className="space-y-2">
-                  
+                  {t.services.slice(12).map((service, index) => (
+                    <div key={index + 12} className="flex items-center space-x-2">
+                      <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                        <CheckCircle className="w-4 h-4 text-teal-600" />
+                      </div>
+                      <span>{service}</span>
+                    </div>
+                  ))}
                   <div className="flex items-center space-x-2">
                     <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
                       <CheckCircle className="w-4 h-4 text-teal-600" />
                     </div>
-                    <span>Lead Generation</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Long-term prospects</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Market Penetration</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Pay-per-click</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Personal approach</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Planning and Strategy</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>PPC Management</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Sales Optimization</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>SEM, SEO and SXO</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Remarketing</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Social Media Management</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Website Development</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>and we offer more services</span>
+                    <span>{t.moreServices}</span>
                   </div>
                 </div>
               </div>

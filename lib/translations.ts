@@ -53,6 +53,7 @@ export const translations = {
     // Experience Card
     experienceTitle: "15+ Years of experience",
     experienceDescription: "We work with clients on the following platforms:",
+    moreServices: "and we offer more services",
     
     // 4 Steps Section
     stepsTitle: "Our working process",
@@ -174,6 +175,7 @@ export const translations = {
     // Experience Card
     experienceTitle: "15+ Jaar ervaring",
     experienceDescription: "Wij werken met klanten op de volgende platforms:",
+    moreServices: "en wij bieden meer diensten",
     
     // 4 Steps Section
     stepsTitle: "Ons werkproces",
