@@ -39,9 +39,23 @@ Cars Marketing provides comprehensive digital marketing solutions for automotive
 ## Getting Started
 
 1. Clone the repository
-2. Install dependencies: `npm install`
-3. Run the development server: `npm run dev`
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+2. Install dependencies: `pnpm install`
+3. Set up environment variables:
+   - Create a `.env.local` file in the root directory
+   - Add your Resend API key: `RESEND_API_KEY=your_resend_api_key_here`
+   - Add contact email: `CONTACT_EMAIL=info@cars-marketing.com`
+4. Run the development server: `pnpm dev`
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Email Configuration
+
+The contact form uses Resend.com for sending emails. To set up:
+
+1. Create an account at [resend.com](https://resend.com)
+2. Get your API key from the dashboard
+3. Add it to your `.env.local` file as `RESEND_API_KEY`
+4. Verify your domain for sending emails
+5. Update the `from` email in `/app/api/contact/route.ts` to match your verified domain
 
 ## Contact
 

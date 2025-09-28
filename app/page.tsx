@@ -1,11 +1,48 @@
+"use client"
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle } from "lucide-react"
+import ContactForm from "@/components/contact-form"
+import QuoteForm from "@/components/quote-form"
+import SimpleContactForm from "@/components/simple-contact-form"
 
 export default function CarsMarketingPage() {
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false)
+  const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false)
+  const [isSimpleContactFormOpen, setIsSimpleContactFormOpen] = useState(false)
+
+  const openContactForm = () => {
+    setIsContactFormOpen(true)
+  }
+
+  const closeContactForm = () => {
+    setIsContactFormOpen(false)
+  }
+
+  const openQuoteForm = () => {
+    setIsQuoteFormOpen(true)
+  }
+
+  const closeQuoteForm = () => {
+    setIsQuoteFormOpen(false)
+  }
+
+  const openSimpleContactForm = () => {
+    setIsSimpleContactFormOpen(true)
+  }
+
+  const closeSimpleContactForm = () => {
+    setIsSimpleContactFormOpen(false)
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <ContactForm isOpen={isContactFormOpen} onClose={closeContactForm} />
+      <QuoteForm isOpen={isQuoteFormOpen} onClose={closeQuoteForm} />
+      <SimpleContactForm isOpen={isSimpleContactFormOpen} onClose={closeSimpleContactForm} />
       {/* Header */}
       <header className="bg-white shadow-lg border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,7 +61,7 @@ export default function CarsMarketingPage() {
               <Badge variant="outline" className="text-sm font-semibold border-teal-200 text-teal-700 bg-teal-50">
                 ASIA, EUROPE, UAE & USA
               </Badge>
-              <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+              <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200" onClick={openQuoteForm}>
                 Get A Quote
               </Button>
               <div className="flex items-center space-x-2 text-sm text-gray-600">
@@ -55,10 +92,10 @@ export default function CarsMarketingPage() {
                 to brand awareness, we drive results that matter.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-6 py-2 text-base rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
-                  Start Your Campaign
+                <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200" onClick={openContactForm}>
+                  Start Today
                 </Button>
-                <Button variant="outline" className="border-2 border-teal-600 text-teal-700 hover:bg-teal-50 font-semibold px-6 py-2 text-base rounded-lg transition-all duration-200">
+                <Button variant="outline" className="border-2 border-teal-600 text-teal-700 hover:bg-teal-50 font-semibold px-6 py-2 rounded-lg transition-all duration-200" onClick={() => document.getElementById('marketing-section')?.scrollIntoView({ behavior: 'smooth' })}>
                   Learn More
                 </Button>
               </div>
@@ -115,7 +152,7 @@ export default function CarsMarketingPage() {
 
 
        {/* Digital & Social Media Marketing Section */}
-       <section className="pt-12 pb-20 bg-gradient-to-br from-white to-gray-50">
+       <section id="marketing-section" className="pt-12 pb-20 bg-gradient-to-br from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-8">
@@ -293,8 +330,8 @@ export default function CarsMarketingPage() {
                 </div>
               </div>
 
-              <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                Schedule an appointment →
+              <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" onClick={openQuoteForm}>
+                Get A Quote
               </Button>
             </div>
 
@@ -361,7 +398,7 @@ export default function CarsMarketingPage() {
       </section>
 
       {/* 4 Steps Process */}
-      <section className="pt-20 pb-28 bg-gradient-to-br from-gray-50 to-white">
+      <section className="pt-20 pb-12 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
@@ -451,11 +488,17 @@ export default function CarsMarketingPage() {
         </div>
       </section>
 
-      
-
-     
-
-      
+      {/* Call to Action Button */}
+      <section className="pb-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Button 
+            className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            onClick={openContactForm}
+          >
+            Start Today
+          </Button>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="bg-gray-100 py-16">
@@ -539,7 +582,14 @@ export default function CarsMarketingPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <p>info@cars-marketing.com</p>
+                    <p>
+                      <button 
+                        onClick={openSimpleContactForm}
+                        className="text-teal-600 hover:text-teal-700 hover:underline cursor-pointer"
+                      >
+                        info@cars-marketing.com
+                      </button>
+                    </p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Business hours</h4>
