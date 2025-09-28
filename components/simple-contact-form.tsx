@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { X, Send, CheckCircle } from "lucide-react"
+import { useTranslations } from "@/lib/use-translations"
 
 interface SimpleContactFormProps {
   isOpen: boolean
@@ -11,6 +12,7 @@ interface SimpleContactFormProps {
 }
 
 export default function SimpleContactForm({ isOpen, onClose }: SimpleContactFormProps) {
+  const t = useTranslations()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -73,7 +75,7 @@ export default function SimpleContactForm({ isOpen, onClose }: SimpleContactForm
       >
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-1 border-b border-gray-100">
           <CardTitle className="text-lg font-bold text-gray-900">
-            Contact Us
+            {t.simpleContactTitle}
           </CardTitle>
           <Button
             variant="ghost"
@@ -96,9 +98,9 @@ export default function SimpleContactForm({ isOpen, onClose }: SimpleContactForm
             <form onSubmit={handleSubmit} className="space-y-4 py-4">
               {/* Name */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Full Name *
-                </label>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    {t.fullName} *
+                  </label>
                 <input
                   type="text"
                   id="name"
@@ -112,9 +114,9 @@ export default function SimpleContactForm({ isOpen, onClose }: SimpleContactForm
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email Address *
-                </label>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    {t.emailAddress} *
+                  </label>
                 <input
                   type="email"
                   id="email"
@@ -128,9 +130,9 @@ export default function SimpleContactForm({ isOpen, onClose }: SimpleContactForm
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Message *
-                </label>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    {t.message} *
+                  </label>
                 <textarea
                   id="message"
                   name="message"

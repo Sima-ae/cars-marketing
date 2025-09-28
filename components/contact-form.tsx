@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { X, Send, CheckCircle } from "lucide-react"
+import { useTranslations } from "@/lib/use-translations"
 
 interface ContactFormProps {
   isOpen: boolean
@@ -27,6 +28,7 @@ const services = [
 ]
 
 export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
+  const t = useTranslations()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -105,7 +107,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
       >
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-1 border-b border-gray-100">
           <CardTitle className="text-lg font-bold text-gray-900">
-            Start Today
+            {t.contactFormTitle}
           </CardTitle>
           <Button
             variant="ghost"
@@ -121,8 +123,8 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
           {isSubmitted ? (
             <div className="text-center py-6">
               <CheckCircle className="h-12 w-12 text-teal-600 mx-auto mb-3" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Thank You!</h3>
-              <p className="text-gray-600 text-sm">We'll get back to you within 24 hours.</p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">{t.thankYou}</h3>
+              <p className="text-gray-600 text-sm">{t.responseTime}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-3">
@@ -130,7 +132,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Full Name *
+                    {t.fullName} *
                   </label>
                   <input
                     type="text"
@@ -144,7 +146,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email Address *
+                    {t.emailAddress} *
                   </label>
                   <input
                     type="email"
@@ -158,7 +160,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 </div>
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                    Company Name
+                    {t.companyName}
                   </label>
                   <input
                     type="text"
@@ -171,7 +173,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    Phone Number
+                    {t.phoneNumber}
                   </label>
                   <input
                     type="tel"
@@ -187,7 +189,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               {/* Platforms Selection */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Platforms of Interest
+                  {t.platformsOfInterest}
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1 border border-gray-200 rounded-md p-2 bg-gray-50">
                   {platforms.map((platform) => (
@@ -207,7 +209,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               {/* Services Selection */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Services Needed
+                  {t.servicesNeeded}
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 border border-gray-200 rounded-md p-2 bg-gray-50">
                   {services.map((service) => (
@@ -227,7 +229,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               {/* Message */}
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Additional Information
+                  {t.additionalInformation}
                 </label>
                 <textarea
                   id="message"
@@ -249,7 +251,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                   disabled={isSubmitting}
                   className="text-xs px-3 py-1.5"
                 >
-                  Cancel
+                  {t.cancel}
                 </Button>
                 <Button
                   type="submit"
@@ -259,12 +261,12 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-white mr-1"></div>
-                      Sending...
+                      {t.sending}...
                     </>
                   ) : (
                     <>
                       <Send className="h-3 w-3 mr-1" />
-                      Send Message
+                      {t.sendMessage}
                     </>
                   )}
                 </Button>

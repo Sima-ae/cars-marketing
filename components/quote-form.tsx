@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { X, Send, CheckCircle } from "lucide-react"
+import { useTranslations } from "@/lib/use-translations"
 
 interface QuoteFormProps {
   isOpen: boolean
@@ -41,6 +42,7 @@ const budgetOptions = [
 ]
 
 export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
+  const t = useTranslations()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -122,7 +124,7 @@ export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
       >
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-1 border-b border-gray-100">
           <CardTitle className="text-lg font-bold text-gray-900">
-            Get A Quote
+            {t.quoteFormTitle}
           </CardTitle>
           <Button
             variant="ghost"
@@ -244,7 +246,7 @@ export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
               {/* Budget Selection */}
               <div>
                 <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-1">
-                  What is your monthly budget? *
+                  {t.monthlyBudget} *
                 </label>
                 <select
                   id="budget"
