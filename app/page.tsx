@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle } from "lucide-react"
+import { CheckCircle, Menu, X } from "lucide-react"
 import ContactForm from "@/components/contact-form"
 import QuoteForm from "@/components/quote-form"
 import SimpleContactForm from "@/components/simple-contact-form"
@@ -16,6 +16,7 @@ export default function CarsMarketingPage() {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false)
   const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false)
   const [isSimpleContactFormOpen, setIsSimpleContactFormOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const openContactForm = () => {
     setIsContactFormOpen(true)
@@ -41,6 +42,14 @@ export default function CarsMarketingPage() {
     setIsSimpleContactFormOpen(false)
   }
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false)
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
       <ContactForm isOpen={isContactFormOpen} onClose={closeContactForm} />
@@ -48,34 +57,67 @@ export default function CarsMarketingPage() {
       <SimpleContactForm isOpen={isSimpleContactFormOpen} onClose={closeSimpleContactForm} />
       {/* Header */}
       <header className="sticky top-4 z-50 mx-4 lg:mx-8">
-        <div className="bg-white/80 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl">
+        <div className="bg-white/80 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-700 rounded-xl flex items-center justify-center shadow-md">
-                <span className="text-white font-bold text-lg">CM</span>
+              {/* Logo - Always visible */}
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-700 rounded-xl flex items-center justify-center shadow-md">
+                  <span className="text-white font-bold text-lg">CM</span>
+                </div>
+                <span className="text-2xl font-bold text-gray-900">Cars Marketing</span>
               </div>
-              <span className="text-2xl font-bold text-gray-900">Cars Marketing</span>
-            </div>
-            <div className="hidden lg:flex items-center space-x-4">
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <div className="w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
-                <span className="font-medium">{t.activeIn}</span>
+              
+              {/* Desktop Menu */}
+              <div className="hidden lg:flex items-center space-x-4">
+                <div className="flex items-center space-x-2 text-sm text-gray-600">
+                  <div className="w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
+                  <span className="font-medium">{t.activeIn}</span>
+                </div>
+                <Badge variant="outline" className="text-sm font-semibold border-teal-200 text-teal-700 bg-teal-50">
+                  {t.regions}
+                </Badge>
+                <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200" onClick={openQuoteForm}>
+                  {t.getAQuote}
+                </Button>
+                <LanguageSwitcher />
               </div>
-              <Badge variant="outline" className="text-sm font-semibold border-teal-200 text-teal-700 bg-teal-50">
-                {t.regions}
-              </Badge>
-              <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200" onClick={openQuoteForm}>
-                {t.getAQuote}
-              </Button>
-              <LanguageSwitcher />
-            </div>
-            <div className="lg:hidden flex items-center space-x-2">
-              <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-3 py-2 rounded-lg shadow-md text-sm" onClick={openQuoteForm}>
-                {t.getAQuote}
-              </Button>
-              <LanguageSwitcher />
-            </div>
+              
+              {/* Mobile Hamburger Menu */}
+              <div className="lg:hidden">
+                <button
+                  onClick={toggleMobileMenu}
+                  className="p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                >
+                  {isMobileMenuOpen ? (
+                    <X className="h-6 w-6 text-gray-700" />
+                  ) : (
+                    <Menu className="h-6 w-6 text-gray-700" />
+                  )}
+                </button>
+              </div>
+            
+            {/* Mobile Menu Dropdown */}
+            {isMobileMenuOpen && (
+              <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border border-white/20 rounded-b-2xl shadow-xl z-40">
+                <div className="px-4 py-4 space-y-3">
+                  <Button 
+                    className="w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold py-3 rounded-lg shadow-md" 
+                    onClick={() => {
+                      openQuoteForm()
+                      closeMobileMenu()
+                    }}
+                  >
+                    {t.getAQuote}
+                  </Button>
+                  <div className="border-t border-gray-200 pt-3">
+                    <div className="flex items-center justify-center">
+                      <LanguageSwitcher />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
             </div>
           </div>
         </div>
