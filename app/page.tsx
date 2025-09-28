@@ -47,7 +47,7 @@ export default function CarsMarketingPage() {
       <QuoteForm isOpen={isQuoteFormOpen} onClose={closeQuoteForm} />
       <SimpleContactForm isOpen={isSimpleContactFormOpen} onClose={closeSimpleContactForm} />
       {/* Header */}
-      <header className="sticky top-4 z-50 mx-4 lg:mx-8 mt-4">
+      <header className="sticky top-4 z-50 mx-4 lg:mx-8">
         <div className="bg-white/80 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
