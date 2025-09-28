@@ -47,9 +47,10 @@ export default function CarsMarketingPage() {
       <QuoteForm isOpen={isQuoteFormOpen} onClose={closeQuoteForm} />
       <SimpleContactForm isOpen={isSimpleContactFormOpen} onClose={closeSimpleContactForm} />
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-lg border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
+      <header className="sticky top-4 z-50 mx-4 lg:mx-8 mt-4">
+        <div className="bg-white/80 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-700 rounded-xl flex items-center justify-center shadow-md">
                 <span className="text-white font-bold text-lg">CM</span>
@@ -81,6 +82,7 @@ export default function CarsMarketingPage() {
               <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-3 py-2 rounded-lg shadow-md text-sm" onClick={openQuoteForm}>
                 {t.getAQuote}
               </Button>
+            </div>
             </div>
           </div>
         </div>

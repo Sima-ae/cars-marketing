@@ -48,12 +48,12 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-32 lg:w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50">
+        <div className="absolute right-0 mt-2 w-32 lg:w-40 bg-white/90 backdrop-blur-md rounded-xl shadow-xl border border-white/20 py-1 z-50">
           {languages.map((language) => (
             <button
               key={language.code}
               onClick={() => handleLanguageChange(language)}
-              className={`w-full flex items-center space-x-2 lg:space-x-3 px-2 lg:px-3 py-1.5 lg:py-2 text-xs lg:text-sm hover:bg-gray-50 transition-colors duration-200 ${
+              className={`w-full flex items-center space-x-2 lg:space-x-3 px-2 lg:px-3 py-1.5 lg:py-2 text-xs lg:text-sm hover:bg-white/50 transition-colors duration-200 ${
                 currentLang === language.code ? 'bg-teal-50 text-teal-700' : 'text-gray-700'
               }`}
             >
