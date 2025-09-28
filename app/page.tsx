@@ -85,7 +85,7 @@ export default function CarsMarketingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                {t.heroTitle} <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-800">Marketing</span>
+                Cars <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-800">Marketing</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl">
                 {t.heroSubtitle}
@@ -264,7 +264,7 @@ export default function CarsMarketingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-              Our working process <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-800">In 4 Steps</span>
+              {t.stepsTitle} <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-800">{t.stepsSubtitle}</span>
             </h2>
           </div>
 
@@ -301,10 +301,9 @@ export default function CarsMarketingPage() {
                     Step 02
                   </Badge>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-teal-600">Plan of approach</h3>
+                <h3 className="text-xl font-bold mb-4 text-teal-600">{t.step2Title}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Crafting the budget, setting realistic goals, choosing audience, objectives, strategy and full
-                  summary.
+                  {t.step2Description}
                 </p>
               </CardContent>
             </Card>
@@ -321,9 +320,9 @@ export default function CarsMarketingPage() {
                     Step 03
                   </Badge>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-teal-600">Start</h3>
+                <h3 className="text-xl font-bold mb-4 text-teal-600">{t.step3Title}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Is everything clear? Are you satisfied with our approach and our plan of approach? Let's start!
+                  {t.step3Description}
                 </p>
               </CardContent>
             </Card>
@@ -340,9 +339,9 @@ export default function CarsMarketingPage() {
                     Step 04
                   </Badge>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-teal-600">Results</h3>
+                <h3 className="text-xl font-bold mb-4 text-teal-600">{t.step4Title}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  After a successful period we create a report and optimize for a follow-up campaign.
+                  {t.step4Description}
                 </p>
               </CardContent>
             </Card>
@@ -376,28 +375,23 @@ export default function CarsMarketingPage() {
 
               <div className="space-y-4 text-gray-600 text-sm mb-8">
                 <p>
-                  Unlock the full potential of your automotive business with our professional Cars Marketing services
-                  and dedicated support.
+                  {t.footerDescription1}
                 </p>
                 <p>
-                  We are certified and specialized in driving growth through advertising and tailor-made digital
-                  solutions combined with effective strategies.
+                  {t.footerDescription2}
                 </p>
                 <p>
-                  Whether you need SEO optimization, engaging content creation, effective social media campaigns, or
-                  cutting-edge PPC management, our team of seasoned professionals are here to elevate your brand's
-                  online presence.
+                  {t.footerDescription3}
                 </p>
                 <p>
-                  Partner with us today and transform your digital landscape for tomorrow's success. Discover the
-                  difference our expertise can make.
+                  {t.footerDescription4}
                 </p>
               </div>
 
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-teal-600 mb-6">Our Services</h3>
+              <h3 className="text-xl font-semibold text-teal-600 mb-6">{t.ourServices}</h3>
               <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-gray-700">
                 {[
                   "Automotive Marketing",
@@ -430,32 +424,32 @@ export default function CarsMarketingPage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-teal-600 mb-6">Contact</h3>
+              <h3 className="text-xl font-semibold text-teal-600 mb-6">{t.contact}</h3>
               
               <div className="mb-8">
                 <div className="space-y-3 text-sm text-gray-700">
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Office</h4>
-                    <p>Zuid-Holland<br />The Netherlands</p>
+                    <h4 className="font-semibold text-gray-900 mb-1">{t.address}</h4>
+                    <p>{t.addressValue}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                    <p>+31687999505</p>
+                    <h4 className="font-semibold text-gray-900 mb-1">{t.phone}</h4>
+                    <p>{t.phoneValue}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
+                    <h4 className="font-semibold text-gray-900 mb-1">{t.email}</h4>
                     <p>
                       <button 
                         onClick={openSimpleContactForm}
                         className="text-teal-600 hover:text-teal-700 hover:underline cursor-pointer"
                       >
-                        info@cars-marketing.com
+                        {t.emailValue}
                       </button>
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Business hours</h4>
-                    <p>Monday - Saturday: <br /><b>08:00 till 20:00 hours CET.</b><br /><i>Sunday: Closed</i></p>
+                    <h4 className="font-semibold text-gray-900 mb-1">{t.businessHours}</h4>
+                    <p>{t.businessHoursValue}</p>
                   </div>
                 </div>
               </div>
@@ -478,8 +472,8 @@ export default function CarsMarketingPage() {
           <div className="border-t border-gray-300 mt-12 pt-8">
             <div className="flex flex-col items-center text-center text-sm text-gray-600 space-y-2">
               
-              <span className="font-bold text-gray-900">Cars Marketing © 2025</span>
-               <span>Powered by <a href="https://000-it.com" target="_blank" className="text-teal-600">TripleZero iT</a></span>
+              <span className="font-bold text-gray-900">{t.copyright}</span>
+               <span>{t.poweredBy} <a href="https://000-it.com" target="_blank" className="text-teal-600">TripleZero iT</a></span>
             </div>
           </div>
         </div>
