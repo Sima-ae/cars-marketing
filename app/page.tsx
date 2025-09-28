@@ -56,7 +56,7 @@ export default function CarsMarketingPage() {
               </div>
               <span className="text-2xl font-bold text-gray-900">Cars Marketing</span>
             </div>
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
                 <span className="font-medium">{t.activeIn}</span>

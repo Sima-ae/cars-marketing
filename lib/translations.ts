@@ -8,12 +8,12 @@ export const translations = {
     // Hero Section
     heroTitle: "Cars",
     heroSubtitle: "Marketing",
-    heroDescription: "Accelerate your automotive business with proven digital marketing strategies. From dealership promotion to brand awareness, we drive results that matter.",
+    heroDescription: "Accelerate your automotive business with AI and proven digital marketing strategies. From car dealership promotion, export, import to brand awareness and sales, we provide leads and results that matter.",
     startToday: "Start Today",
     learnMore: "Learn More",
     
     // Platform Section
-    platformTitle: "We provide services for our clients on the following platforms",
+    platformTitle: "We provide services for the following platforms",
     
     // Marketing Section
     marketingTitle: "Digital & Social Media",
@@ -141,12 +141,12 @@ export const translations = {
     // Hero Section
     heroTitle: "Auto",
     heroSubtitle: "Marketing",
-    heroDescription: "Versnel uw automotive bedrijf met bewezen digitale marketing strategieën. Van dealer promotie tot merkbekendheid, wij leveren resultaten die ertoe doen.",
+    heroDescription: "Verbeter uw automotive bedrijf met AI en bewezen digitale marketing strategieën. Van auto/dealer promotie, export, import tot merkbekendheid en verkoop, wij leveren leads en resultaten die ertoe doen.",
     startToday: "Start vandaag",
     learnMore: "Meer informatie",
     
     // Platform Section
-    platformTitle: "Wij bieden diensten aan voor onze klanten op de volgende platforms",
+    platformTitle: "Wij bieden diensten aan voor de onderstaande platformen",
     
     // Marketing Section
     marketingTitle: "Digitale & Sociale Media",
