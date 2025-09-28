@@ -42,7 +42,7 @@ export default function CarsMarketingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
       <ContactForm isOpen={isContactFormOpen} onClose={closeContactForm} />
       <QuoteForm isOpen={isQuoteFormOpen} onClose={closeQuoteForm} />
       <SimpleContactForm isOpen={isSimpleContactFormOpen} onClose={closeSimpleContactForm} />
@@ -89,8 +89,7 @@ export default function CarsMarketingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-50 via-white to-teal-50 py-16 lg:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-500/5 to-transparent"></div>
+      <section className="relative py-16 lg:py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
@@ -125,7 +124,7 @@ export default function CarsMarketingPage() {
       </section>
 
       {/* Platform Icons */}
-      <section className="py-12 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-gray-700 text-lg font-medium mb-4">
             {t.platformTitle}
@@ -161,7 +160,7 @@ export default function CarsMarketingPage() {
 
 
        {/* Digital & Social Media Marketing Section */}
-       <section id="marketing-section" className="pt-12 pb-20 bg-gradient-to-br from-white to-gray-50">
+       <section id="marketing-section" className="pt-12 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-8">
@@ -270,7 +269,7 @@ export default function CarsMarketingPage() {
       </section>
 
       {/* 4 Steps Process */}
-      <section className="pt-20 pb-12 bg-gradient-to-br from-gray-50 to-white">
+      <section className="pt-20 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
@@ -360,7 +359,7 @@ export default function CarsMarketingPage() {
       </section>
 
       {/* Call to Action Button */}
-      <section className="pb-16 bg-white">
+      <section className="pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Button 
             className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
