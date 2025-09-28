@@ -47,7 +47,7 @@ export default function CarsMarketingPage() {
       <QuoteForm isOpen={isQuoteFormOpen} onClose={closeQuoteForm} />
       <SimpleContactForm isOpen={isSimpleContactFormOpen} onClose={closeSimpleContactForm} />
       {/* Header */}
-      <header className="bg-white shadow-lg border-b border-gray-100">
+      <header className="sticky top-0 z-50 bg-white shadow-lg border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-3">
@@ -69,9 +69,17 @@ export default function CarsMarketingPage() {
               </Button>
               <LanguageSwitcher />
             </div>
-            <div className="lg:hidden">
-              <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-4 py-2 rounded-lg shadow-md">
-                Get Quote
+            <div className="lg:hidden flex items-center space-x-2">
+              <div className="flex items-center space-x-1">
+                <div className="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></div>
+                <span className="text-xs font-medium text-gray-600">{t.activeIn}</span>
+              </div>
+              <Badge variant="outline" className="text-xs font-semibold border-teal-200 text-teal-700 bg-teal-50 px-2 py-1">
+                {t.regions}
+              </Badge>
+              <LanguageSwitcher />
+              <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-3 py-2 rounded-lg shadow-md text-sm" onClick={openQuoteForm}>
+                {t.getAQuote}
               </Button>
             </div>
           </div>
