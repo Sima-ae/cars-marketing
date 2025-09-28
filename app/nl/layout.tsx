@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import './globals.css'
+import '../globals.css'
 import StructuredData from '@/components/structured-data'
 
 export const metadata: Metadata = {
-  title: 'Cars Marketing - Professional Automotive Digital Marketing Services',
-  description: 'Accelerate your automotive business with proven digital marketing strategies. Professional Cars Marketing services for dealerships, brands, and automotive businesses.',
-  keywords: ['automotive marketing', 'car dealership marketing', 'digital marketing', 'social media marketing', 'SEO', 'PPC', 'automotive advertising', 'car sales marketing'],
+  title: 'Cars Marketing - Professionele Automotive Digitale Marketing Diensten',
+  description: 'Versnel uw automotive bedrijf met bewezen digitale marketing strategieën. Professionele Auto Marketing diensten voor dealers, merken en automotive bedrijven.',
+  keywords: ['automotive marketing', 'auto dealer marketing', 'digitale marketing', 'sociale media marketing', 'SEO', 'PPC', 'automotive advertenties', 'auto verkoop marketing', 'Nederland', 'Dutch'],
   authors: [{ name: 'Cars Marketing' }],
   creator: 'Cars Marketing',
   publisher: 'Cars Marketing',
@@ -18,24 +18,24 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://cars-marketing.com'),
   alternates: {
-    canonical: '/',
+    canonical: '/nl',
     languages: {
       'en': '/',
       'nl': '/nl',
     },
   },
   openGraph: {
-    title: 'Cars Marketing - Professional Automotive Digital Marketing Services',
-    description: 'Accelerate your automotive business with proven digital marketing strategies. Professional Cars Marketing services for dealerships, brands, and automotive businesses.',
-    url: 'https://cars-marketing.com',
+    title: 'Cars Marketing - Professionele Automotive Digitale Marketing Diensten',
+    description: 'Versnel uw automotive bedrijf met bewezen digitale marketing strategieën. Professionele Auto Marketing diensten voor dealers, merken en automotive bedrijven.',
+    url: 'https://cars-marketing.com/nl',
     siteName: 'Cars Marketing',
-    locale: 'en_US',
+    locale: 'nl_NL',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cars Marketing - Professional Automotive Digital Marketing Services',
-    description: 'Accelerate your automotive business with proven digital marketing strategies. Professional Cars Marketing services for dealerships, brands, and automotive businesses.',
+    title: 'Cars Marketing - Professionele Automotive Digitale Marketing Diensten',
+    description: 'Versnel uw automotive bedrijf met bewezen digitale marketing strategieën. Professionele Auto Marketing diensten voor dealers, merken en automotive bedrijven.',
   },
   robots: {
     index: true,
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default function DutchLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="nl">
       <head>
         <StructuredData />
         <style>{`
