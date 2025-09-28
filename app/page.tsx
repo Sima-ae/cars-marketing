@@ -112,7 +112,7 @@ export default function CarsMarketingPage() {
                   </Button>
                   <div className="border-t border-gray-200 pt-3">
                     <div className="flex items-center justify-center">
-                      <LanguageSwitcher />
+                      <LanguageSwitcher isMobileMenu={true} />
                     </div>
                   </div>
                 </div>

@@ -9,7 +9,11 @@ const languages = [
   { code: 'nl', name: 'Nederlands', flag: '/flags/nl.svg', path: '/nl' }
 ]
 
-export default function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  isMobileMenu?: boolean
+}
+
+export default function LanguageSwitcher({ isMobileMenu = false }: LanguageSwitcherProps) {
   const [isOpen, setIsOpen] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
@@ -27,7 +31,9 @@ export default function LanguageSwitcher() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-1 lg:space-x-2 text-xs lg:text-sm text-gray-600 hover:text-gray-900 transition-colors duration-200"
+        className={`flex items-center space-x-1 lg:space-x-2 text-xs lg:text-sm text-gray-600 hover:text-gray-900 transition-colors duration-200 ${
+          isMobileMenu ? 'text-sm py-2 px-3' : ''
+        }`}
       >
         <Image
           src={currentLanguage.flag}
@@ -48,12 +54,16 @@ export default function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-32 lg:w-40 bg-white/90 backdrop-blur-md rounded-xl shadow-xl border border-white/20 py-1 z-50">
+        <div className={`absolute right-0 mt-2 bg-white/90 backdrop-blur-md rounded-xl shadow-xl border border-white/20 py-1 z-50 ${
+          isMobileMenu ? 'w-48' : 'w-32 lg:w-40'
+        }`}>
           {languages.map((language) => (
             <button
               key={language.code}
               onClick={() => handleLanguageChange(language)}
-              className={`w-full flex items-center space-x-2 lg:space-x-3 px-2 lg:px-3 py-1.5 lg:py-2 text-xs lg:text-sm hover:bg-white/50 transition-colors duration-200 ${
+              className={`w-full flex items-center space-x-2 lg:space-x-3 hover:bg-white/50 transition-colors duration-200 ${
+                isMobileMenu ? 'px-4 py-3 text-sm' : 'px-2 lg:px-3 py-1.5 lg:py-2 text-xs lg:text-sm'
+              } ${
                 currentLang === language.code ? 'bg-teal-50 text-teal-700' : 'text-gray-700'
               }`}
             >
@@ -62,9 +72,9 @@ export default function LanguageSwitcher() {
                 alt={language.name}
                 width={16}
                 height={12}
-                className="rounded-sm lg:w-5 lg:h-4"
+                className={`rounded-sm ${isMobileMenu ? 'w-6 h-4' : 'lg:w-5 lg:h-4'}`}
               />
-              <span className="font-medium text-xs lg:text-sm">{language.name}</span>
+              <span className={`font-medium ${isMobileMenu ? 'text-sm' : 'text-xs lg:text-sm'}`}>{language.name}</span>
               {currentLang === language.code && (
                 <svg className="w-3 h-3 lg:w-4 lg:h-4 ml-auto text-teal-600" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
