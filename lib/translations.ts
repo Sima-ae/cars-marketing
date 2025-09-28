@@ -75,13 +75,17 @@ export const translations = {
     ourServices: "Our Services",
     contact: "Contact",
     address: "Address",
-    addressValue: "123 Business Street\nMarketing City, MC 12345\nUnited States",
+    addressValue: ["Zuid-Holland", "The Netherlands"],
     phone: "Phone",
     phoneValue: "+31687999505",
     email: "Email",
     emailValue: "info@cars-marketing.com",
     businessHours: "Business hours",
-    businessHoursValue: "Monday - Saturday:\n08:00 till 20:00 hours CET.\nSunday: Closed",
+    businessHoursValue: [
+      "Monday - Saturday:",
+      { text: "08:00 till 20:00 hours CET.", bold: true },
+      "Sunday: Closed"
+    ],
     copyright: "Cars Marketing © 2025",
     poweredBy: "Powered by",
     
@@ -198,13 +202,17 @@ export const translations = {
     ourServices: "Onze Diensten",
     contact: "Contact",
     address: "Adres",
-    addressValue: "123 Businessstraat\nMarketing Stad, MC 12345\nNederland",
+    addressValue: ["Zuid-Holland", "Nederland"],
     phone: "Telefoon",
     phoneValue: "+31687999505",
     email: "E-mail",
     emailValue: "info@cars-marketing.com",
     businessHours: "Openingstijden",
-    businessHoursValue: "Maandag - Zaterdag:\n08:00 tot 20:00 uur CET.\nZondag: Gesloten",
+    businessHoursValue: [
+      "Maandag - Zaterdag:",
+      { text: "08:00 tot 20:00 uur CET.", bold: true },
+      "Zondag: Gesloten"
+    ],
     copyright: "Cars Marketing © 2025",
     poweredBy: "Powered by",
     

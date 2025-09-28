@@ -165,7 +165,7 @@ export default function CarsMarketingPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600">
                 <div className="space-y-2">
-                  {t.services.slice(0, 12).map((service, index) => (
+                  {t.services.slice(0, 13).map((service, index) => (
                     <div key={index} className="flex items-center space-x-2">
                       <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
                         <CheckCircle className="w-4 h-4 text-teal-600" />
@@ -175,7 +175,7 @@ export default function CarsMarketingPage() {
                   ))}
                 </div>
                 <div className="space-y-2">
-                  {t.services.slice(12).map((service, index) => (
+                  {t.services.slice(13).map((service, index) => (
                     <div key={index + 12} className="flex items-center space-x-2">
                       <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
                         <CheckCircle className="w-4 h-4 text-teal-600" />
@@ -430,7 +430,17 @@ export default function CarsMarketingPage() {
                 <div className="space-y-3 text-sm text-gray-700">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">{t.address}</h4>
-                    <p>{t.addressValue}</p>
+                    <p>
+                      {Array.isArray(t.addressValue) 
+                        ? t.addressValue.map((line, index) => (
+                            <span key={index}>
+                              {line}
+                              {index < t.addressValue.length - 1 && <br />}
+                            </span>
+                          ))
+                        : t.addressValue
+                      }
+                    </p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">{t.phone}</h4>
@@ -449,7 +459,21 @@ export default function CarsMarketingPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">{t.businessHours}</h4>
-                    <p>{t.businessHoursValue}</p>
+                    <p>
+                      {Array.isArray(t.businessHoursValue) 
+                        ? t.businessHoursValue.map((line, index) => (
+                            <span key={index}>
+                              {typeof line === 'object' && line.bold ? (
+                                <strong>{line.text}</strong>
+                              ) : (
+                                line
+                              )}
+                              {index < t.businessHoursValue.length - 1 && <br />}
+                            </span>
+                          ))
+                        : t.businessHoursValue
+                      }
+                    </p>
                   </div>
                 </div>
               </div>
