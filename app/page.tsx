@@ -8,8 +8,11 @@ import { CheckCircle } from "lucide-react"
 import ContactForm from "@/components/contact-form"
 import QuoteForm from "@/components/quote-form"
 import SimpleContactForm from "@/components/simple-contact-form"
+import LanguageSwitcher from "@/components/language-switcher"
+import { useTranslations } from "@/lib/use-translations"
 
 export default function CarsMarketingPage() {
+  const t = useTranslations()
   const [isContactFormOpen, setIsContactFormOpen] = useState(false)
   const [isQuoteFormOpen, setIsQuoteFormOpen] = useState(false)
   const [isSimpleContactFormOpen, setIsSimpleContactFormOpen] = useState(false)
@@ -56,18 +59,15 @@ export default function CarsMarketingPage() {
             <div className="hidden lg:flex items-center space-x-8">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <div className="w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
-                <span className="font-medium">Active in</span>
+                <span className="font-medium">{t.activeIn}</span>
               </div>
               <Badge variant="outline" className="text-sm font-semibold border-teal-200 text-teal-700 bg-teal-50">
-                ASIA, EUROPE, UAE & USA
+                {t.regions}
               </Badge>
               <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200" onClick={openQuoteForm}>
-                Get A Quote
+                {t.getAQuote}
               </Button>
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <div className="w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
-                <span className="font-medium">Languages</span>
-              </div>
+              <LanguageSwitcher />
             </div>
             <div className="lg:hidden">
               <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-4 py-2 rounded-lg shadow-md">
@@ -85,18 +85,17 @@ export default function CarsMarketingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Cars <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-800">Marketing</span>
+                {t.heroTitle} <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-800">Marketing</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Accelerate your automotive business with proven digital marketing strategies. From dealership promotion
-                to brand awareness, we drive results that matter.
+                {t.heroSubtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200" onClick={openContactForm}>
-                  Start Today
+                  {t.startToday}
                 </Button>
                 <Button variant="outline" className="border-2 border-teal-600 text-teal-700 hover:bg-teal-50 font-semibold px-6 py-2 rounded-lg transition-all duration-200" onClick={() => document.getElementById('marketing-section')?.scrollIntoView({ behavior: 'smooth' })}>
-                  Learn More
+                  {t.learnMore}
                 </Button>
               </div>
             </div>
@@ -119,7 +118,7 @@ export default function CarsMarketingPage() {
       <section className="py-12 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-gray-700 text-lg font-medium mb-4">
-            We provide services for our clients on the following platforms
+            {t.platformTitle}
           </p>
           <div className="grid grid-cols-6 sm:grid-cols-9 md:grid-cols-12 lg:grid-cols-18 gap-3 sm:gap-4 lg:gap-6 justify-items-center">
             {[
@@ -158,32 +157,22 @@ export default function CarsMarketingPage() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-                  Digital & Social Media <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-800">Marketing</span>
+                  {t.marketingTitle} <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-800">{t.marketingSubtitle}</span>
                 </h2>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">With a focus on measurable results and a commitment to excellence, we ensure your automotive marketing efforts translate into increased traffic, higher conversions, and enhanced brand visibility.</p>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed font-medium">We only work with official channels, NO Bots!</p>
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">{t.marketingDescription}</p>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed font-medium">{t.noBotsText}</p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600">
                 <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
+                  {t.services.slice(0, 12).map((service, index) => (
+                    <div key={index} className="flex items-center space-x-2">
+                      <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
+                        <CheckCircle className="w-4 h-4 text-teal-600" />
+                      </div>
+                      <span>{service}</span>
                     </div>
-                    <span>A/B Testing</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Advertising Campaigns</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-teal-600" />
-                    </div>
-                    <span>Advice from certified professionals</span>
-                  </div>
+                  ))}
                   
                   <div className="flex items-center space-x-2">
                     <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
@@ -331,7 +320,7 @@ export default function CarsMarketingPage() {
               </div>
 
               <Button className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" onClick={openQuoteForm}>
-                Get A Quote
+                {t.scheduleAppointment}
               </Button>
             </div>
 
@@ -340,7 +329,7 @@ export default function CarsMarketingPage() {
                 <div className="space-y-6">
                   <div className="bg-gradient-to-r from-teal-600 to-teal-700 text-white p-6 rounded-2xl text-center shadow-lg">
                     <div className="text-4xl font-bold mb-2">15+</div>
-                    <div className="text-lg font-medium">Years of experience</div>
+                    <div className="text-lg font-medium">{t.experienceTitle}</div>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="space-y-2">
