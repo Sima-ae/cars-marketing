@@ -140,7 +140,7 @@ export default function SimpleContactForm({ isOpen, onClose }: SimpleContactForm
                   required
                   value={formData.message}
                   onChange={handleInputChange}
-                  placeholder="How can we help you?"
+                  placeholder={t.simpleMessagePlaceholder}
                   className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
               </div>

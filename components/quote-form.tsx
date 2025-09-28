@@ -149,7 +149,7 @@ export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Full Name *
+                    {t.fullName} *
                   </label>
                   <input
                     type="text"
@@ -163,7 +163,7 @@ export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email Address *
+                    {t.emailAddress} *
                   </label>
                   <input
                     type="email"
@@ -177,7 +177,7 @@ export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
                 </div>
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                    Company Name
+                    {t.companyName}
                   </label>
                   <input
                     type="text"
@@ -190,7 +190,7 @@ export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    Phone Number
+                    {t.phoneNumber}
                   </label>
                   <input
                     type="tel"
@@ -206,7 +206,7 @@ export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
               {/* Platforms Selection */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Platforms of Interest
+                  {t.platformsOfInterest}
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1 border border-gray-200 rounded-md p-2 bg-gray-50">
                   {platforms.map((platform) => (
@@ -226,7 +226,7 @@ export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
               {/* Services Selection */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Services Needed
+                  {t.servicesNeeded}
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 border border-gray-200 rounded-md p-2 bg-gray-50">
                   {services.map((service) => (
@@ -256,7 +256,7 @@ export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
                   onChange={handleInputChange}
                   className="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                 >
-                  <option value="">Select your budget range</option>
+                  <option value="">{t.budgetPlaceholder}</option>
                   {budgetOptions.map((budget) => (
                     <option key={budget} value={budget}>
                       {budget}
@@ -268,7 +268,7 @@ export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
               {/* Message */}
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Additional Information
+                  {t.additionalInformation}
                 </label>
                 <textarea
                   id="message"
@@ -276,7 +276,7 @@ export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
                   rows={2}
                   value={formData.message}
                   onChange={handleInputChange}
-                  placeholder="Tell us about your project, goals, or any specific requirements..."
+                  placeholder={t.messagePlaceholder}
                   className="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
               </div>
@@ -290,7 +290,7 @@ export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
                   disabled={isSubmitting}
                   className="text-sm px-3 py-1.5"
                 >
-                  Cancel
+                  {t.cancel}
                 </Button>
                 <Button
                   type="submit"
@@ -305,7 +305,7 @@ export default function QuoteForm({ isOpen, onClose }: QuoteFormProps) {
                   ) : (
                     <>
                       <Send className="h-3 w-3 mr-1" />
-                      Send Quote Request
+                      {t.sendQuoteRequest}
                     </>
                   )}
                 </Button>

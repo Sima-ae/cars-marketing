@@ -237,7 +237,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                   rows={2}
                   value={formData.message}
                   onChange={handleInputChange}
-                  placeholder="Tell us about your project, goals, or any specific requirements..."
+                  placeholder={t.messagePlaceholder}
                   className="w-full px-2 py-1.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
               </div>

@@ -6,8 +6,9 @@ export const translations = {
     getAQuote: "Get A Quote",
     
     // Hero Section
-    heroTitle: "Professional Cars Marketing",
-    heroSubtitle: "Accelerate your automotive business with proven digital marketing strategies. From dealership promotion to brand awareness, we drive results that matter.",
+    heroTitle: "Cars",
+    heroSubtitle: "Marketing",
+    heroDescription: "Accelerate your automotive business with proven digital marketing strategies. From dealership promotion to brand awareness, we drive results that matter.",
     startToday: "Start Today",
     learnMore: "Learn More",
     
@@ -99,7 +100,7 @@ export const translations = {
     companyName: "Company Name",
     platformsOfInterest: "Platforms of Interest",
     servicesNeeded: "Services Needed",
-    monthlyBudget: "What is your monthly budget?",
+    monthlyBudget: "What is your monthly budget for advertising and marketing?",
     selectBudget: "Select your budget range",
     additionalInformation: "Additional Information",
     message: "Message",
@@ -109,6 +110,11 @@ export const translations = {
     thankYou: "Thank You!",
     responseTime: "We'll get back to you within 24 hours.",
     sending: "Sending...",
+    
+    // Placeholders
+    messagePlaceholder: "Tell us about your project, goals, or any specific requirements...",
+    simpleMessagePlaceholder: "How can we help you?",
+    budgetPlaceholder: "Select your budget range",
     
     // Budget Options
     budgetOptions: [
@@ -130,13 +136,14 @@ export const translations = {
     // Header
     activeIn: "Actief in",
     regions: "AZIË, EUROPA, VAE & VS",
-    getAQuote: "Offerte Aanvragen",
+    getAQuote: "Offerte aanvragen",
     
     // Hero Section
-    heroTitle: "Professionele Auto Marketing",
-    heroSubtitle: "Versnel uw automotive bedrijf met bewezen digitale marketing strategieën. Van dealer promotie tot merkbekendheid, wij leveren resultaten die ertoe doen.",
-    startToday: "Start Vandaag",
-    learnMore: "Meer Informatie",
+    heroTitle: "Auto",
+    heroSubtitle: "Marketing",
+    heroDescription: "Versnel uw automotive bedrijf met bewezen digitale marketing strategieën. Van dealer promotie tot merkbekendheid, wij leveren resultaten die ertoe doen.",
+    startToday: "Start vandaag",
+    learnMore: "Meer informatie",
     
     // Platform Section
     platformTitle: "Wij bieden diensten aan voor onze klanten op de volgende platforms",
@@ -146,7 +153,7 @@ export const translations = {
     marketingSubtitle: "Marketing",
     marketingDescription: "Met focus op meetbare resultaten en een toewijding aan excellentie, zorgen wij ervoor dat uw automotive marketing inspanningen vertalen naar meer verkeer, hogere conversies en verbeterde merkbekendheid.",
     noBotsText: "Wij werken alleen met officiële kanalen, GEEN Bots!",
-    scheduleAppointment: "Offerte Aanvragen",
+    scheduleAppointment: "Offerte aanvragen",
     
     // Services
     services: [
@@ -217,25 +224,30 @@ export const translations = {
     poweredBy: "Powered by",
     
     // Contact Forms
-    contactFormTitle: "Start Vandaag",
-    quoteFormTitle: "Offerte Aanvragen",
-    simpleContactTitle: "Contact Opnemen",
-    fullName: "Volledige Naam",
+    contactFormTitle: "Start vandaag",
+    quoteFormTitle: "Offerte aanvragen",
+    simpleContactTitle: "Contact opnemen",
+    fullName: "Volledige naam",
     emailAddress: "E-mailadres",
     phoneNumber: "Telefoonnummer",
     companyName: "Bedrijfsnaam",
-    platformsOfInterest: "Platforms van Interesse",
-    servicesNeeded: "Benodigde Diensten",
-    monthlyBudget: "Wat is uw maandbudget?",
-    selectBudget: "Selecteer uw budgetbereik",
-    additionalInformation: "Aanvullende Informatie",
+    platformsOfInterest: "Gewenste platform(en)",
+    servicesNeeded: "Nodige diensten",
+    monthlyBudget: "Wat is uw maandbudget voor adverteren en marketing?",
+    selectBudget: "Maak een keuze",
+    additionalInformation: "Aanvullende informatie",
     message: "Bericht",
     cancel: "Annuleren",
-    sendMessage: "Bericht Verzenden",
-    sendQuoteRequest: "Offerte Verzoek Verzenden",
-    thankYou: "Dank je wel!",
+    sendMessage: "Bericht verzenden",
+    sendQuoteRequest: "Aanvraag verzenden",
+    thankYou: "Bedankt!",
     responseTime: "Wij nemen binnen 24 uur contact met u op.",
     sending: "Verzenden...",
+    
+    // Placeholders
+    messagePlaceholder: "Vertel ons over uw project, doelen of specifieke vereisten...",
+    simpleMessagePlaceholder: "Hoe kunnen wij u helpen?",
+    budgetPlaceholder: "Maak een keuze",
     
     // Budget Options
     budgetOptions: [
