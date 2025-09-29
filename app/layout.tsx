@@ -31,11 +31,20 @@ export const metadata: Metadata = {
     siteName: 'Cars Marketing',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://cars-marketing.com/CM-Weblogo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Cars Marketing Logo',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Cars Marketing - Professional Automotive Digital Marketing Services',
     description: 'Accelerate your automotive business with proven digital marketing strategies. Professional Cars Marketing services for dealerships, brands, and automotive businesses.',
+    images: ['https://cars-marketing.com/CM-Weblogo.png'],
   },
   robots: {
     index: true,
@@ -47,6 +56,11 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  icons: {
+    icon: '/CM-Favicon.png',
+    shortcut: '/CM-Favicon.png',
+    apple: '/CM-Favicon.png',
   },
 }
 

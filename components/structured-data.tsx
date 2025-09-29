@@ -14,7 +14,7 @@ export default function StructuredData() {
       ? "Professionele automotive digitale marketing diensten voor dealers, merken en automotive bedrijven in Nederland."
       : "Professional automotive digital marketing services for dealerships, brands, and automotive businesses.",
     "url": "https://cars-marketing.com",
-    "logo": "https://cars-marketing.com/placeholder-logo.png",
+    "logo": "https://cars-marketing.com/CM-Weblogo.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+31687999505",
